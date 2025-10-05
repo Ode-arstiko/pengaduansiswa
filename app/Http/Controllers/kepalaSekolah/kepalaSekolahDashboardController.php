@@ -5,13 +5,15 @@ namespace App\Http\Controllers\kepalaSekolah;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class kepalaSekolahController extends Controller
+class kepalaSekolahDashboardController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $data = [
-            'content' => 'guru.dashboard.index',
+            'content' => 'kepalaSekolah.dashboard.index',
             'title' => 'Dashboard'
         ];
-        return view('layouts.guru.wrapper', $data);
+
+        return view('layouts.kepalaSekolah.wrapper', $data);
     }
 }

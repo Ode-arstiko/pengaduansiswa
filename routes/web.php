@@ -3,7 +3,7 @@
 use App\Http\Controllers\admin\AdminDashboardController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\bk\bkDashboardController;
-use App\Http\Controllers\kepalaSekolah\kepalaSekolahController;
+use App\Http\Controllers\kepalaSekolah\kepalaSekolahDashboardController;
 use App\Http\Controllers\siswa\siswaDashboardController;
 use App\Http\Controllers\tataUsaha\tataUsahaDashboardController;
 use App\Http\Controllers\wakaKesiswaan\wakaKesiswaanDashboardController;
@@ -33,8 +33,8 @@ Route::middleware(['auth'])->group(function() {
     Route::middleware(['role:siswa'])->group(function() {
         Route::get('/siswa', [siswaDashboardController::class, 'index']);
     });
-    Route::middleware(['role:kepala-sekolah'])->group(function() {
-        Route::get('/kepala-sekolah', [kepalaSekolahController::class, 'index']);
+    Route::middleware(['role:kepala-sekolah'])->group(function () {
+        Route::get('/kepala-sekolah', [kepalaSekolahDashboardController::class, 'index']);
     });
     Route::middleware(['role:waka-kesiswaan'])->group(function() {
         Route::get('/waka-kesiswaan', [wakaKesiswaanDashboardController::class, 'index']);
