@@ -32,7 +32,7 @@
 
         {{-- Riwayat Tanggapan --}}
         <a href="{{ route('kepala.riwayat') }}"
-            class="flex items-center gap-2 {{ request()->is('kepala-sekolah/riwayat-tanggapan') ? 'bg-white text-blue-700 font-semibold ring-2 ring-blue-400' : 'hover:bg-blue-700' }} p-3 rounded-lg transition">
+            class="flex items-center gap-2 {{ request()->is('kepala-sekolah/riwayat') ? 'bg-white text-blue-700 font-semibold ring-2 ring-blue-400' : 'hover:bg-blue-700' }} p-3 rounded-lg transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
