@@ -34,8 +34,11 @@ Route::middleware(['auth'])->group(function() {
         Route::get('/siswa', [siswaDashboardController::class, 'index']);
     });
     Route::middleware(['role:kepala-sekolah'])->group(function () {
-        Route::get('/kepala-sekolah', [kepalaSekolahDashboardController::class, 'index']);
-    });
+    Route::get('/kepala-sekolah', [kepalaSekolahDashboardController::class, 'index'])->name('kepala.dashboard');
+    Route::get('/kepala-sekolah/tanggapan', [TanggapanController::class, 'index'])->name('kepala.tanggapan');
+    Route::get('/kepala-sekolah/riwayat-tanggapan', [RiwayatController::class, 'index'])->name('kepala.riwayat');
+    Route::get('/kepala-sekolah/laporan', [LaporanController::class, 'index'])->name('kepala.laporan');
+});
     Route::middleware(['role:waka-kesiswaan'])->group(function() {
         Route::get('/waka-kesiswaan', [wakaKesiswaanDashboardController::class, 'index']);
     });
