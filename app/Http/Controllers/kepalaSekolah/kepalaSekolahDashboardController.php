@@ -9,9 +9,9 @@ class kepalaSekolahController extends Controller
 {
     public function index() {
         $data = [
-            'content' => 'admin.dashboard.index',
+            'content' => 'guru.dashboard.index',
             'title' => 'Dashboard'
         ];
-        return view('layouts.admin.wrapper', $data);
+        return view('layouts.guru.wrapper', $data);
     }
 }
