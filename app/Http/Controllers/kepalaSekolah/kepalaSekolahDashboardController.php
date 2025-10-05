@@ -10,7 +10,7 @@ class kepalaSekolahDashboardController extends Controller
     public function index()
     {
         $data = [
-            'content' => 'kepalaSekolah.dashboard.index',
+           'content' => 'layouts.guru.content',
             'title' => 'Dashboard'
         ];
 
