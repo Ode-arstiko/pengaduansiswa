@@ -14,6 +14,6 @@ class kepalaSekolahDashboardController extends Controller
             'title' => 'Dashboard'
         ];
 
-        return view('layouts.kepalaSekolah.wrapper', $data);
+        return view('layouts.guru.wrapper', $data);
     }
 }
