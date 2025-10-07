@@ -6,11 +6,15 @@ use App\Http\Controllers\admin\AdminGuruController;
 use App\Http\Controllers\admin\AdminSiswaController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\bk\bkDashboardController;
-use App\Http\Controllers\kepalaSekolah\kepalaSekolahController;
+use App\Http\Controllers\kepalaSekolah\kepalaSekolahDashboardController;
 use App\Http\Controllers\siswa\siswaDashboardController;
 use App\Http\Controllers\tataUsaha\tataUsahaDashboardController;
 use App\Http\Controllers\wakaKesiswaan\wakaKesiswaanDashboardController;
 use App\Http\Controllers\wakaKurikulum\wakaKurikulumDashboardController;
+use App\Http\Controllers\siswa\SiswaLaporanController;
+use App\Http\Controllers\kepalaSekolah\kepalaSekolahLaporanController;
+use App\Http\Controllers\kepalaSekolah\kepalaSekolahRiwayatController;
+use App\Http\Controllers\kepalaSekolah\kepalaSekolahTanggapanController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -56,10 +60,16 @@ Route::middleware(['auth'])->group(function() {
         Route::delete('/admin/kelola-admin/delete/{id}', [AdminController::class, 'delete']);
     });
     Route::middleware(['role:siswa'])->group(function() {
-        Route::get('/siswa', [siswaDashboardController::class, 'index']);
+        Route::get('/siswa', [SiswaDashboardController::class, 'index'])->name('siswa.dashboard');
+        Route::get('/laporan', [SiswaLaporanController::class, 'index'])->name('siswa.laporan');
+        Route::get('/laporan/create', [SiswaLaporanController::class, 'create'])->name('siswa.laporan.create');
+        Route::get('/laporan/cetak', [SiswaLaporanController::class, 'cetak'])->name('siswa.laporan.cetak');
     });
-    Route::middleware(['role:kepala-sekolah'])->group(function() {
-        Route::get('/kepala-sekolah', [kepalaSekolahController::class, 'index']);
+    Route::middleware(['role:kepala-sekolah'])->group(function () {
+    Route::get('/kepala-sekolah', [KepalaSekolahDashboardController::class, 'index'])->name('kepala.dashboard');
+    Route::get('/kepala-sekolah/tanggapan', [KepalaSekolahTanggapanController::class, 'index'])->name('kepala.tanggapan');
+    Route::get('/kepala-sekolah/riwayat', [KepalaSekolahRiwayatController::class, 'index'])->name('kepala.riwayat');
+    Route::get('/kepala-sekolah/laporan', [KepalaSekolahLaporanController::class, 'index'])->name('kepala.laporan');
     });
     Route::middleware(['role:waka-kesiswaan'])->group(function() {
         Route::get('/waka-kesiswaan', [wakaKesiswaanDashboardController::class, 'index']);
