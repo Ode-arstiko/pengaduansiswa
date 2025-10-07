@@ -8,8 +8,8 @@
 
     <nav class="space-y-2">
         <!-- Dashboard -->
-        <a href="dashboard.html"
-            class="flex items-center gap-2 bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition">
+        <a href="/admin"
+            class="flex items-center gap-2 @if($title == 'Dashboard') bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition @else hover:bg-blue-700 hover:text-white p-3 rounded-lg transition @endif">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -19,8 +19,8 @@
         </a>
 
         <!-- Data Siswa -->
-        <a href="tanggapan.html"
-            class="flex items-center gap-2 hover:bg-blue-700 hover:text-white p-3 rounded-lg transition">
+        <a href="/admin/kelola-siswa"
+            class="flex items-center gap-2 @if($title == 'Siswa') bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition @else hover:bg-blue-700 hover:text-white p-3 rounded-lg transition @endif">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -30,8 +30,8 @@
         </a>
 
         <!-- Data Guru -->
-        <a href="riwayat_tanggapan.html"
-            class="flex items-center gap-2 hover:bg-blue-700 hover:text-white p-3 rounded-lg transition">
+        <a href="/admin/kelola-guru"
+            class="flex items-center gap-2 @if($title == 'Guru') bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition @else hover:bg-blue-700 hover:text-white p-3 rounded-lg transition @endif">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -41,8 +41,8 @@
         </a>
 
         <!-- Data Admin -->
-        <a href="cetak-laporan.html"
-            class="flex items-center gap-2 hover:bg-blue-700 hover:text-white p-3 rounded-lg transition">
+        <a href="/admin/kelola-admin"
+            class="flex items-center gap-2 @if($title == 'Admin') bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition @else hover:bg-blue-700 hover:text-white p-3 rounded-lg transition @endif">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round"

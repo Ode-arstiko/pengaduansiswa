@@ -10,7 +10,7 @@
                 </svg>
             </button>
             <div class="breadcrumb hidden sm:flex space-x-2 items-center">
-                <a href="#" class="text-2xl text-white font-semibold">Dashboard</a>
+                <a href="#" class="text-2xl text-white font-semibold">{{ $title }}</a>
             </div>
         </div>
 
@@ -109,7 +109,7 @@
             <div class="relative">
                 <button onclick="toggleDropdown()"
                     class="p-1 rounded-full hover:ring-2 hover:ring-white transition">
-                    <img src="{{ asset('assets/profil/user.jpg') }}" alt="Profil"
+                    <img src="{{ asset('assets/profil/user.png') }}" alt="Profil"
                         class="h-8 w-8 rounded-full object-cover border-2 border-white shadow" />
                 </button>
 
@@ -117,7 +117,7 @@
                     class="absolute right-0 mt-2 w-48 bg-white text-gray-700 rounded-xl shadow-lg hidden z-50">
                     <div class="flex flex-col items-center py-4 px-4">
                         <div class="w-16 h-16 rounded-full bg-gray-200 bg-cover bg-center"
-                            style="background-image: url({{ asset('assets/profil/user.jpg') }});">
+                            style="background-image: url({{ asset('assets/profil/user.png') }});">
                         </div>
                         <p class="mt-2 font-semibold text-green-600">Kesiswaan</p>
                     </div>
