@@ -5,12 +5,12 @@ namespace App\Http\Controllers\kepalaSekolah;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class kepalaSekolahRiwayatController extends Controller
+class KepalaSekolahRiwayatController extends Controller
 {
     public function index()
     {
         $data = [
-           'content' => 'kepalaSekolah.riwayat.index',
+           'content' => 'KepalaSekolah.riwayat.index',
             'title' => 'Riwayat'
         ];
 
