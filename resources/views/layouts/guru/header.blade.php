@@ -54,7 +54,7 @@
                         </div>
                         <div class="w-full ps-3">
                             <div class="text-gray-500 text-sm light:text-gray-400">
-                                <span class="font-semibold text-gray-900 light:text-white">Kesiswaan</span>
+                                <span class="font-semibold text-gray-900 light:text-white">Kepala Sekolah</span>
                             </div>
                             <span class="text-gray-400 text-xs light:text-white">
                                 Peminjaman Ruang OSIS oleh Andini Kusuma – Mohon persetujuan ruang OSIS untuk
@@ -119,7 +119,7 @@
                         <div class="w-16 h-16 rounded-full bg-gray-200 bg-cover bg-center"
                             style="background-image: url({{ asset('assets/profil/user.jpg') }});">
                         </div>
-                        <p class="mt-2 font-semibold text-green-600">Kesiswaan</p>
+                        <p class="mt-2 font-semibold text-green-600">Kepala Sekolah</p>
                     </div>
 
                     <hr class="border-gray-200" />
