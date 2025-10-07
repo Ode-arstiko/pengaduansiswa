@@ -8,6 +8,10 @@ use App\Http\Controllers\siswa\siswaDashboardController;
 use App\Http\Controllers\tataUsaha\tataUsahaDashboardController;
 use App\Http\Controllers\wakaKesiswaan\wakaKesiswaanDashboardController;
 use App\Http\Controllers\wakaKurikulum\wakaKurikulumDashboardController;
+use App\Http\Controllers\siswa\SiswaLaporanController;
+use App\Http\Controllers\kepalaSekolah\kepalaSekolahLaporanController;
+use App\Http\Controllers\kepalaSekolah\kepalaSekolahRiwayatController;
+use App\Http\Controllers\kepalaSekolah\kepalaSekolahTanggapanController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -31,7 +35,10 @@ Route::middleware(['auth'])->group(function() {
         Route::get('/admin', [AdminDashboardController::class, 'index']);
     });
     Route::middleware(['role:siswa'])->group(function() {
-        Route::get('/siswa', [siswaDashboardController::class, 'index']);
+        Route::get('/siswa', [SiswaDashboardController::class, 'index'])->name('siswa.dashboard');
+        Route::get('/laporan', [SiswaLaporanController::class, 'index'])->name('siswa.laporan');
+        Route::get('/laporan/create', [SiswaLaporanController::class, 'create'])->name('siswa.laporan.create');
+        Route::get('/laporan/cetak', [SiswaLaporanController::class, 'cetak'])->name('siswa.laporan.cetak');
     });
     Route::middleware(['role:kepala-sekolah'])->group(function () {
     Route::get('/kepala-sekolah', [kepalaSekolahDashboardController::class, 'index'])->name('kepala.dashboard');
