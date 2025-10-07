@@ -45,7 +45,7 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/kepala-sekolah/tanggapan', [KepalaSekolahTanggapanController::class, 'index'])->name('kepala.tanggapan');
     Route::get('/kepala-sekolah/riwayat', [KepalaSekolahRiwayatController::class, 'index'])->name('kepala.riwayat');
     Route::get('/kepala-sekolah/laporan', [KepalaSekolahLaporanController::class, 'index'])->name('kepala.laporan');
-});
+    });
     Route::middleware(['role:waka-kesiswaan'])->group(function() {
         Route::get('/waka-kesiswaan', [wakaKesiswaanDashboardController::class, 'index']);
     });
