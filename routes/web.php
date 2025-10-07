@@ -41,10 +41,10 @@ Route::middleware(['auth'])->group(function() {
         Route::get('/laporan/cetak', [SiswaLaporanController::class, 'cetak'])->name('siswa.laporan.cetak');
     });
     Route::middleware(['role:kepala-sekolah'])->group(function () {
-    Route::get('/kepala-sekolah', [kepalaSekolahDashboardController::class, 'index'])->name('kepala.dashboard');
-    Route::get('/kepala-sekolah/tanggapan', [kepalaSekolahTanggapanController::class, 'index'])->name('kepala.tanggapan');
-    Route::get('/kepala-sekolah/riwayat', [kepalaSekolahRiwayatController::class, 'index'])->name('kepala.riwayat');
-    Route::get('/kepala-sekolah/laporan', [kepalaSekolahLaporanController::class, 'index'])->name('kepala.laporan');
+    Route::get('/kepala-sekolah', [KepalaSekolahDashboardController::class, 'index'])->name('kepala.dashboard');
+    Route::get('/kepala-sekolah/tanggapan', [KepalaSekolahTanggapanController::class, 'index'])->name('kepala.tanggapan');
+    Route::get('/kepala-sekolah/riwayat', [KepalaSekolahRiwayatController::class, 'index'])->name('kepala.riwayat');
+    Route::get('/kepala-sekolah/laporan', [KepalaSekolahLaporanController::class, 'index'])->name('kepala.laporan');
 });
     Route::middleware(['role:waka-kesiswaan'])->group(function() {
         Route::get('/waka-kesiswaan', [wakaKesiswaanDashboardController::class, 'index']);
